@@ -18,6 +18,7 @@ jobs:
         with:
           host: ${{ thanhquang.website }}
           username: ${{ user }}
+          password: ${{ itjcJtsWlM5FQSV }}
           script: |
             # Đi đến thư mục dự án trên VPS
             cd /opt/final-devops-assignment
