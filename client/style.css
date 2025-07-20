@@ -1,0 +1,30 @@
+body {
+  font-family: sans-serif;
+  margin: 20px;
+}
+.container {
+  display: flex;
+  gap: 40px;
+}
+.products-section,
+.admin-section {
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 8px;
+}
+#productList div {
+  border-bottom: 1px solid #eee;
+  padding: 10px 0;
+}
+#productList button {
+  margin-left: 10px;
+  color: red;
+}
+input,
+textarea,
+button {
+  display: block;
+  width: 95%;
+  margin-bottom: 10px;
+  padding: 8px;
+}

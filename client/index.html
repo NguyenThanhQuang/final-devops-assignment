@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Shop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Sản phẩm của Shop</h1>
+    <div class="container">
+        <!-- Khu vực hiển thị và tìm kiếm sản phẩm -->
+        <div class="products-section">
+            <h2>Danh sách sản phẩm</h2>
+            <input type="text" id="searchInput" placeholder="Tìm kiếm sản phẩm...">
+            <div id="productList"></div>
+        </div>
+
+        <!-- Khu vực quản lý cho admin -->
+        <div class="admin-section">
+            <h2>Quản lý sản phẩm (Admin)</h2>
+            <form id="productForm">
+                <input type="text" id="name" placeholder="Tên sản phẩm" required>
+                <input type="number" id="price" placeholder="Giá" required>
+                <textarea id="description" placeholder="Mô tả"></textarea>
+                <button type="submit">Thêm sản phẩm</button>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
