@@ -1,4 +1,4 @@
-name: Deploy to VPS
+name: Deploy to VPS using Password
 
 on:
   push:
@@ -27,14 +27,14 @@ jobs:
             git pull origin main
 
             # Triển khai Server API
-            echo "Deploying Server API..."
+            echo "--> Deploying Server API..."
             cd server
             npm install
             pm2 restart webshop-api
 
             # Triển khai Client
-            echo "Deploying Client..."
+            echo "--> Deploying Client..."
             cd ../
             sudo cp -r client/* /var/www/thanhquang.website/
 
-            echo "Deployment successful!"
+            echo "--> Deployment successful!"
