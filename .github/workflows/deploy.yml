@@ -1,4 +1,4 @@
-name: Deploy to VPS using Password
+name: Deploy to VPS using SSH Key
 
 on:
   push:
@@ -18,23 +18,15 @@ jobs:
         with:
           host: ${{ secrets.VPS_HOST }}
           username: ${{ secrets.VPS_USERNAME }}
-          password: ${{ secrets.VPS_PASSWORD }}
+          key: ${{ secrets.VPS_SSH_PRIVATE_KEY }}
           script: |
-            # Đi đến thư mục dự án trên VPS
             cd /opt/final-devops-assignment
-
-            # Kéo code mới nhất từ GitHub
             git pull origin main
-
-            # Triển khai Server API
             echo "--> Deploying Server API..."
             cd server
             npm install
             pm2 restart webshop-api
-
-            # Triển khai Client
             echo "--> Deploying Client..."
             cd ../
             sudo cp -r client/* /var/www/thanhquang.website/
-
             echo "--> Deployment successful!"
