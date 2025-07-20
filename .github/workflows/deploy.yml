@@ -16,9 +16,9 @@ jobs:
       - name: Deploy to VPS via SSH
         uses: appleboy/ssh-action@master
         with:
-          host: ${{ thanhquang.website }}
-          username: ${{ user }}
-          password: ${{ itjcJtsWlM5FQSV }}
+          host: ${{ secrets.VPS_HOST }}
+          username: ${{ secrets.VPS_USERNAME }}
+          password: ${{ secrets.VPS_PASSWORD }}
           script: |
             # Đi đến thư mục dự án trên VPS
             cd /opt/final-devops-assignment
